@@ -1,4 +1,4 @@
-# [NOM DU PROJET]
+# [ROBOSORTER]
 ## Membres du groupe
 | Nom | Rôle |
 ## Description du projet
