@@ -1,4 +1,6 @@
-# [NOM DU PROJET]
+# Projet RobotSorter
+## Groupe H_bot (Groupe 6)
+
 ## Membres du groupe
 | Nicodem Laurore | Chef d'équipe | Gestion du repository, la documentation du projet, Montage de la video et participation dans la programmation 
 ## Description du projet
