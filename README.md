@@ -1,4 +1,4 @@
-# RoboSorter
+# [NOM DU PROJET]
 ## Membres du groupe
 | Nicodem Laurore | Chef d'équipe | Gestion du repository, la documentation du projet, Montage de la video et participation dans la programmation 
 ## Description du projet
