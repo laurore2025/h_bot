@@ -1,4 +1,11 @@
-""""
+"""
+Constructeur de scène CoppeliaSim pour le robot SCARA Sorter.
+
+Ce script se connecte à CoppeliaSim (simulation arrêtée) et construit
+programmatiquement toute la scène : base, bras SCARA 6 axes, gripper,
+convoyeur, zones de dépôt, capteur de vision, lumières, sol.
+Il intègre également le script Lua de contrôle et sauvegarde la scène en .ttt
+
 Usage :
     python build_scene.py [--host 127.0.0.1] [--port 23000] [--out robot_sorter.ttt]
 
@@ -286,15 +293,22 @@ class SceneBuilder:
 
     def build_vision_sensor(self):
         print("[Scene] Ajout du capteur de vision...")
+        # intParams   : [resX, resY, 0, 0]             → exactement 4 éléments
+        # floatParams : [nearClip, farClip, viewAngle(rad),
+        #                sensorSizeX, sensorSizeY,
+        #                defaultR, defaultG, defaultB,
+        #                0.0, 0.0, 0.0]                → exactement 11 éléments
         sensor_h = self.sim.createVisionSensor(
-            0,          # options
-            [256, 256], # résolution
+            0,                          # options (bit-coded)
+            [256, 256, 0, 0],           # intParams : résolution + 2 réservés
             [
-                0.01,   # near clipping
-                5.0,    # far clipping
-                60.0,   # angle (degrés)
-                1.0,    # ratio X/Y
-                0.0, 0.0  # offset
+                0.01,                   # near clipping (m)
+                5.0,                    # far clipping (m)
+                math.radians(60.0),     # view angle en RADIANS
+                1.0,                    # sensorSizeX
+                1.0,                    # sensorSizeY
+                0.5, 0.5, 0.5,          # couleur de fond par défaut (RGB)
+                0.0, 0.0, 0.0,          # réservés
             ]
         )
         # Positionné au-dessus du convoyeur, pointant vers le bas
