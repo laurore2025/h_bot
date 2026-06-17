@@ -2,7 +2,8 @@
 ## Groupe H_bot (Groupe 6)
 
 ## Membres du groupe
-- **Nicodem Laurore** Developpeur Web | Entrepreneur
+- **Nicodem Laurore** 
+Developpeur Web | Entrepreneur
 
 - **Nicolas Christian Toussaint** 
 
