@@ -19,6 +19,8 @@ link ==> [Repository project](https://github.com/laurore2025/h_bot)
 
 ## Capture / Vidéo de la simulation
 
+[lien ](https://go.screenpal.com/watch/cO13ofnusmA)
+
 ## Composants / Modèles 3D utilisés
 
 #### 1) Robot manipulateur
@@ -77,5 +79,6 @@ Position visible : x -0.300 ; y -0.450 ; z 0.025
 - **Nicolas Christian Toussaint** | Vision et ui | Programmation de la caméra pour la détection des couleurs et configuration du tableau de bord (UI) pour le comptage des objets.
 
 ## Tests réalisés
+
 ## Améliorations possibles
 ## Difficultés rencontrées
